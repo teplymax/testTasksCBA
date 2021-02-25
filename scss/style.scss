@@ -36,21 +36,35 @@ button {
 }
 body {
   width: 100%;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
 }
 .list {
   list-style-type: none;
 }
-.button {
-}
 .container {
   margin: 0 auto;
 }
-.header {
-  font-family: "Gilroy";
-  font-size: 18px;
-  font-style: normal;
+.title {
+  font-family: "Playfair Display";
+  font-size: 40px;
   font-weight: 400;
-  text-align: center;
+  line-height: 56px;
+  letter-spacing: 0.20000000298023224px;
+}
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 9.699999809265137px;
+  text-transform: uppercase;
+  color: #ff9900;
+}
+.header {
+  font-size: 18px;
   color: #fff;
   background-image: url("../img/header__background.png");
   background-position: center;
@@ -72,8 +86,11 @@ body {
       justify-content: flex-end;
     }
   }
-
   &__contact {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.015em;
     &:first-of-type {
       margin-right: 47px;
     }
@@ -83,9 +100,6 @@ body {
     margin-left: 105px;
     width: 102px;
     justify-content: space-between;
-  }
-
-  &__social {
   }
 
   &__navigation {
@@ -135,6 +149,10 @@ body {
     background-color: transparent;
     border: 2px solid #ff9900;
     color: #ff9900;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: -0.015em;
     &:hover {
       background-color: #ff9900;
       color: inherit;
@@ -152,30 +170,23 @@ body {
     width: 67%;
     margin: 136px auto 248px auto;
     &__title {
-      font-family: "Playfair Display";
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 56px;
-      letter-spacing: 0.20000000298023224px;
-      text-align: left;
       margin-bottom: 30px;
     }
 
-    &__text {
-      font-family: "Gilroy";
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
+    &__subtitle {
       line-height: 25px;
       letter-spacing: 0.20000000298023224px;
       text-align: left;
       max-width: 776px;
       width: 90%;
       margin-bottom: 60px;
+      font-size: 18px;
     }
 
     &__button {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
       background-color: #ff9900;
       color: inherit;
       width: 166px;
@@ -207,6 +218,10 @@ body {
 
     &__text {
       z-index: 100;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: 0.20000000298023224px;
       text-align: left;
     }
 
@@ -217,16 +232,53 @@ body {
     }
   }
 }
+@media (max-width: 1040px) {
+  .header-advantages {
+    padding: 40px 0;
+    &__container {
+      flex-wrap: wrap;
+    }
+    &__item {
+      position: relative;
+      &:nth-last-of-type(2),
+      &:nth-last-of-type(1) {
+        margin-top: 25px;
+      }
+      &:nth-of-type(2) {
+        top: 45px;
+      }
+    }
+  }
+}
+@media (max-width: 810px) {
+  .header-advantages {
+    &__item {
+      &:nth-last-of-type(2),
+      &:nth-last-of-type(1) {
+        margin: 0;
+      }
+      &:nth-of-type(2) {
+        top: 0;
+      }
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        margin: 25px 0;
+      }
+      &:last-of-type {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
 .about {
   min-height: 766px;
-  font-family: "Gilroy";
   background: url("../img/two-bedroom-x2--plan\ 2.png");
   background-repeat: no-repeat;
   background-position: bottom right;
-  text-align: left;
   letter-spacing: 0.20000000298023224px;
-  font-weight: 400;
-  font-style: normal;
+  color: #000;
   &__left {
     background-image: url("../img/charles-deluvio-c2thq3SXJiA-unsplash\ 1.png");
     background-repeat: no-repeat;
@@ -261,25 +313,8 @@ body {
     padding: 148px 0 202px 187px;
   }
 
-  &__subtitle {
-    color: #ff9900;
-    letter-spacing: 9.699999809265137px;
-    text-align: left;
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-  }
-
   &__title {
-    line-height: 56px;
     margin: 8px 0 27px 0;
-    font-family: "Playfair Display";
-    font-size: 40px;
-    line-height: 56px;
-    font-weight: 400;
-    font-style: normal;
   }
 
   &__text {
@@ -290,7 +325,6 @@ body {
 }
 .workStages {
   background-color: #000;
-  color: #fff;
   &__container {
     padding-top: 65px;
     flex-direction: column;
@@ -304,27 +338,9 @@ body {
   &__subtitle {
     width: 100%;
   }
-  &__subtitle {
-    font-family: "Gilroy";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 9.699999809265137px;
-    text-align: left;
-    color: #ff9900;
-    text-transform: uppercase;
-  }
 
   &__title {
     margin: 8px 0 98px 0;
-    font-family: "Playfair Display";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 56px;
-    letter-spacing: 0.20000000298023224px;
-    text-align: left;
   }
 
   &__visualization {
@@ -336,35 +352,20 @@ body {
     justify-content: space-between;
     width: 100%;
     margin-top: 30px;
-  }
-
-  &__stage {
+    font-size: 14px;
+    line-height: 19px;
   }
 }
 .portfolio {
+  color: #000;
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
-  &__subtitle {
-    font-family: "Gilroy";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 9.699999809265137px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ff9900;
-  }
-
+  background: url("../img/two-bedroom-x2--plan\ 2.png");
+  background-repeat: no-repeat;
+  background-position: top 451px left 80%;
+  background-size: 48%;
   &__title {
-    font-family: "Playfair Display";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 56px;
-    letter-spacing: 0.20000000298023224px;
-    text-align: center;
     margin-bottom: 40px;
   }
 
@@ -380,54 +381,39 @@ body {
   width: 35%;
   justify-content: center;
   &__title {
-    font-family: "Gilroy";
     font-size: 24px;
-    font-style: normal;
     font-weight: 600;
     line-height: 33px;
     letter-spacing: 0.20000000298023224px;
-    text-align: left;
   }
 
   &__text {
     margin: 24px 0 30px 0;
-    font-family: "Gilroy";
     font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 25px;
     letter-spacing: 0.20000000298023224px;
-    text-align: left;
   }
 
   &__info {
     align-items: center;
     span:first-of-type {
-      font-family: "Gilroy";
       font-size: 18px;
-      font-style: normal;
       font-weight: 700;
       line-height: 25px;
-      letter-spacing: 0.20000000298023224px;
-      text-align: left;
     }
     &:first-of-type {
       margin-bottom: 12px;
     }
     span:nth-child(2) {
-      font-family: "Gilroy";
       font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
       line-height: 28px;
       letter-spacing: 0.20000000298023224px;
-      text-align: left;
       margin-left: 13px;
-      color: #fff;
     }
   }
 }
 .portfolio-slider {
+  align-self: flex-end;
   max-width: 648px;
   width: 45%;
   height: fit-content;
@@ -489,27 +475,9 @@ body {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(26px);
   }
-  &__subtitle {
-    font-family: "Gilroy";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 9.699999809265137px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ff9900;
-  }
 
   &__title {
     margin: 8px 0 82px 0;
-    font-family: "Playfair Display";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 56px;
-    letter-spacing: 0.20000000298023224px;
-    text-align: center;
   }
 }
 .reviews-slider {
@@ -518,24 +486,16 @@ body {
   max-width: 561px;
   width: 84%;
   &__text {
-    text-align: center;
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-style: normal;
     font-weight: 300;
-    line-height: 18px;
     letter-spacing: 0.01em;
     text-align: center;
   }
 
   &__sender {
-    font-family: "Gilroy";
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.015em;
-    text-align: center;
     margin: 19px 0 106px 0;
   }
 
@@ -555,7 +515,6 @@ body {
   background: #ffb800;
   min-height: 370px;
   padding: 45px 0 40px 0;
-  color: #fff;
   &__container {
     flex-direction: column;
     max-width: 705px;
@@ -570,18 +529,12 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
-    letter-spacing: 0px;
-    text-align: left;
   }
 
   &__subtitle {
-    font-family: "Gilroy";
     font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 21px;
     letter-spacing: 0.005em;
-    text-align: left;
   }
 
   &__inputs {
@@ -591,14 +544,9 @@ body {
   }
 
   &__input {
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-style: normal;
     font-weight: 500;
-    line-height: 19px;
     letter-spacing: 0.07em;
-    text-align: left;
-    background-color: transparent;
+    background: none;
     border: none;
     border-bottom: 0.5px solid #ffffff;
     width: 304px;
@@ -646,14 +594,9 @@ body {
     flex-direction: column;
   }
   &__discription {
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-style: normal;
     font-weight: 300;
     line-height: 25px;
     letter-spacing: -0.6999996900558472px;
-    text-align: left;
-    color: #fff;
     max-width: 308px;
     img {
       width: 71px;
@@ -661,41 +604,16 @@ body {
     }
   }
 
-  &__text {
-  }
-
-  &__contacts {
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 19px;
-
-    text-align: left;
-    color: #fff;
-  }
-
   &__adress {
+    margin-bottom: 45px;
+    line-height: 19px;
     span {
       font-weight: 700;
     }
-    margin-bottom: 45px;
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 19px;
-
-    text-align: left;
   }
 
   &__phone {
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 19px;
-    text-align: left;
   }
   &__social {
     &:nth-of-type(2) {
@@ -710,15 +628,9 @@ body {
     min-height: 48px;
     align-items: center;
     p {
-      font-family: "Gilroy";
-      font-style: normal;
-      font-weight: normal;
       font-size: 14px;
-      line-height: 16px;
       letter-spacing: 0.005em;
-
       color: rgba(255, 255, 255, 0.29);
-
       max-width: 1196px;
       width: 82%;
     }
@@ -726,25 +638,12 @@ body {
 }
 .footer-nav {
   flex-direction: column;
-  font-family: "Gilroy";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 19px;
-  text-align: left;
-  color: #fff;
-
   &__list {
     flex-direction: column;
   }
 
   &__item {
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 19px;
-    text-align: left;
   }
 
   &__link {
